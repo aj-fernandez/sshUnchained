@@ -17,6 +17,7 @@ check_connection(){
     elif [ $? -ne 0 ]; then
             echo "Connection lost at `date`"
             echo "Reconnecting..."
+            #autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -i /root/Downloads/sshUnchained/id_rsa -R 17000:0.0.0.0:2222 -p 2022 $user@$host
             ssh -p $port $user@$host
     fi
 }       
