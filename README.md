@@ -1,3 +1,3 @@
 # sshUnchained
 
-A simple script to maintain a ssh connection up.
+A simple script to keep a ssh connection alive.
